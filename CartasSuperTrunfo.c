@@ -47,7 +47,18 @@ void exibirCarta (Carta carta){
 }
 
 int main() {
-   
+    int numCartas;
+    Prinf("Quantas cartas deseja cadastrar?\n");
+    scanf("%d", &numCartas);
 
+    Carta cartas[numCartas];
+
+    for (int i; i<numCartas; i++){
+        printf("Cadastro da Carta %d\n", i+1);
+        cadastrarCarta(&cartas[i]);
+        exibirCarta (cartas[i]);
+    }
+   
+    printf("\nCadastro finalizado!\n");
     return 0;
 }
